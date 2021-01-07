@@ -1,18 +1,20 @@
 #include <bits/stdc++.h>
+#include<string>
 using namespace std;
 
 int main()
 {
     int i,n,t,countlone;
     char temp='l',p;
-    cin>>n;
+    
+    char str[1000000];
+    cin>>str;
+    n=strlen(str);
     t=n-1;
     if (n%2==0)
         countlone=0;
     else 
         countlone=1;
-    char str[n];
-    cin>>str;
     for ( i=0; i<=(n-1)/2;i++ )
     {
         temp='l';
@@ -31,6 +33,7 @@ int main()
         if (temp=='l')
         {
             //cout<<"executed"<<i;
+            if(n%2!=0)
             if(i==n/2)
                 break;
             countlone--;
@@ -48,7 +51,7 @@ int main()
         }
     }
    // cout<<countlone;
-    if(countlone>=0 || i==(n-1)/2)
+    if(countlone>=0)
         cout<<str;
     else
         cout<<"no soln";
