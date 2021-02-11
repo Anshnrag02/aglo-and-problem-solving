@@ -14,7 +14,9 @@ int main()
     int s=arr[n-1],e=total_pages,mid,maxst=0;
     while(s<e)
     {
-        int students[1000]={0};
+        int students[1000];
+        for ( int i=0; i<1000; i++)
+            students[i]=0;
         int j=0;
         mid=(s+e)/2;
         for(int i=0;i<n;i++){
@@ -43,4 +45,5 @@ int main()
                 e=mid-1;
         }
     }
+    cout<<maxst;
 }
