@@ -15,7 +15,7 @@ void printer(char *a, int no){
 void subseq(char *a){
     int n=strlen(a);
     int range=(1<<n) - 1;
-    for(int i = 0 ; i < range ; i++){
+    for(int i = 0 ; i <= range ; i++){
         printer(a,i);
         cout<<endl;
     }
