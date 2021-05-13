@@ -1,24 +1,22 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
+
 using namespace std;
 
-int main()
-{
-    int n,maxcount=1,count=1;
-    cin>>n;
-    int a[n],pd=0;
-    cin>>a[0];
-    for ( int i = 1 ; i<n ; i++ )
-    {
-        cin>>a[i];
-        if(a[i]-a[i-1]!=pd){
-
-            pd=a[i]-a[i-1];
-            count=1;
+int main(){
+    
+    int a[]={10,7,4,6,8,10,11};
+    int n=7,d=INT_MAX;
+    int maxlength=2,lensofa=2;
+    int leftidx;
+    for(int i=1; i<n; i++){
+        if(d==a[i]-a[i-1])
+            lensofa++;
+        else{
+            d=a[i]-a[i-1];
+            lensofa=2;
         }
-        else
-            count++;
-        maxcount=max(count,maxcount);
-    }    
-    cout<<maxcount+1;
-    return 0;
+        maxlength=max(maxlength,lensofa);
+        
+    }
+    std::cout << maxlength << std::endl;
 }
