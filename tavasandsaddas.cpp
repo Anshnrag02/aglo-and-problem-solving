@@ -15,7 +15,6 @@ int main()
         else
             sum+=1<<(count+1);
         count++;
-        mult*=10;
         n/=10;
     }
     cout<<sum;
